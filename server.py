@@ -1,11 +1,11 @@
 import socket
 
-TARGET_IP = input("Enter your target IP Address")
-TARGET_PORT = input("Enter your target Port")
+#TARGET_IP = input("Enter your target IP Address")
+#TARGET_PORT = input("Enter your target Port")
 
 HOST = "127.0.0.1"
 PORT = 65432
-
+print("Trying to connect to client...")
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((HOST, PORT))
     s.listen()
