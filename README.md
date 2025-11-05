@@ -19,3 +19,7 @@ chmod +x dist/client
 - cd to the file in /dist and upload it to drive.
 
 - go to drive and download file and upload it to github and edit the release
+
+# Run ansible by
+
+- ansible-playbook -i "[client IP,]" playbook.yml -u [user] -b -k -K

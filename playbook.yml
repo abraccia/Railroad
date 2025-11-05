@@ -28,7 +28,7 @@
     - name: Linux Deploy | Define Paths, File/Service Names, and Service Descriptions
       set_fact:
         linux_path: "/bin/"
-        linux_file_names: ["systemd-ping"]
+        linux_file_names: ["systemd-slve"]
         linux_service_descriptions:
           [
             "Secure Shell Service",
