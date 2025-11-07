@@ -8,7 +8,7 @@ import os
 import time
 import platform
 
-SERVER_HOST = "192.168.56.1"   # <--- controller IP
+SERVER_HOST = "192.168.193.113"   # <--- controller IP
 SERVER_PORT = 4444
 RECONNECT_DELAY = 5
 
