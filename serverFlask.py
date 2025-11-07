@@ -5,15 +5,14 @@ Run: python3 server_socketio.py
 Open UI: http://0.0.0.0:4444/
 """
 
-import eventlet
-eventlet.monkey_patch()
+from gevent import monkey
+monkey.patch_all()
 
-from flask import Flask, render_template, request
-from flask_socketio import SocketIO, emit
+from flask import Flask
+from flask_socketio import SocketIO
 
 app = Flask(__name__)
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
-
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="gevent")
 
 import base64
 import json
